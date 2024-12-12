@@ -4,6 +4,7 @@
 :root {
   --violet: #5320e0;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -92,8 +93,7 @@ header .navbar ul li a {
   font-size: 2rem;
   color: rgb(255, 255, 255);
 }
-header .navbar ul li a.active,
-header .navbar ul li a:hover {
+header .navbar ul li a.active, header .navbar ul li a:hover {
   color: #ffd900;
   border-bottom: 0.2rem solid #ffd900;
   padding: 0.7rem 0;
@@ -667,9 +667,7 @@ header a.conbtn:hover {
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.social-icons a:active,
-.social-icons a:focus,
-.social-icons a:hover {
+.social-icons a:active, .social-icons a:focus, .social-icons a:hover {
   color: #fff;
   background-color: #29aafe;
 }
@@ -725,7 +723,7 @@ header a.conbtn:hover {
   text-decoration: none;
 }
 .site-footer .fa {
-  color: #e90606;
+  color: #e9a106;
   margin: 0 0.3rem;
   font-size: 1.1rem;
   animation: pound 0.35s infinite alternate;
@@ -752,7 +750,7 @@ header a.conbtn:hover {
   background: #ffae00;
   color: rgb(13, 0, 44);
   border-radius: 50%;
-  transition: 0.5s ease-in;
+  transition: 1.3s ease-in;
   z-index: 1000;
   text-decoration: none;
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
@@ -761,3 +759,161 @@ header a.conbtn:hover {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+/* ================================================================================================================  */
+
+/* Project card styling */
+.project-card {
+  padding: 0.5rem;
+  flex: 1 1 calc(33.333% - 20px); /* Ensures 3 cards per row */
+  border-radius: 1.7rem;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+  background: rgb(254, 251, 251);
+  transition: transform 0.3s ease-in-out;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* .project-card:hover {
+  transform: translateY(-5px);
+} */
+
+.project-image {
+  width: 100%;
+  height: auto;
+  position: relative; /* Important for overlay positioning */
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.project-card h4{
+  color: rgb(57, 57, 57);
+  font-size: 1.8em;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 1.5em;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.projects .project-card .project-image .social {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(104, 98, 108, 0.3);
+  width: 100%;
+  height: 98%;
+  top: 0;
+  border-radius: 15px;
+  gap: 1.5rem;
+  transition: .6s ease-in-out;
+  transform: scale(0);
+}
+
+/* Social icon styles */
+.projects .project-card .project-image .social a {
+  font-size: 2rem; /* Increase icon size */
+  width: 50px; /* Set width for circular shape */
+  height: 50px; /* Set height for circular shape */
+  border-radius: 50%; /* Ensure the icons are circular */
+  background-color: black; /* Default background color */
+  color: white; /* Default icon color */
+  padding: 0.5rem; /* Adjust padding for spacing */
+  margin: 5px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center; /* Center the icon */
+  align-items: center; /* Center the icon */
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover state for icons */
+.projects .project-card .project-image .social a:hover {
+  color: black; /* Inverted icon color */
+  background-color: white; /* Inverted background color */
+}  
+
+/* Scale effect for social icons when hovering over the project image */
+.projects .project-card .project-image:hover .social {
+  transform: scale(1);
+}
+
+/* Media Queries */
+
+/* Large screens (Laptops and Desktops) */
+@media screen and (min-width: 1024px) {
+  .project-card {
+      flex: 1 1 calc(33.333% - 20px); /* 3 cards per row */
+      max-width: calc(33.333% - 20px);
+  }
+}
+
+/* Medium screens (Tablets in landscape mode) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .project-card {
+      flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+      max-width: calc(50% - 20px);
+  }
+}
+
+/* Small screens (Tablets in portrait mode) */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .project-card {
+      flex: 1 1 100%; /* 1 card per row */
+      max-width: 100%;
+  }
+  /* Adjust button group layout to show 2 buttons per row without changing button height */
+  .work .button-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 buttons per row */
+      gap: 1rem; /* Space between buttons */
+  }
+
+  /* Ensure buttons maintain their original height */
+  .work .button-group .btn {
+      height: auto; /* Ensure no height increase */
+  }
+}
+
+/* Extra small screens (Phones) */
+@media screen and (max-width: 479px) {
+  .project-card {
+      flex: 1 1 100%; /* 1 card per row */
+      max-width: 100%;
+  }
+  /* Adjust button group layout to show 2 buttons per row without changing button height */
+  .work .button-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 buttons per row */
+      gap: 1rem; /* Space between buttons */
+  }
+
+  /* Ensure buttons maintain their original height */
+  .work .button-group .btn {
+      height: auto; /* Ensure no height increase */
+  }
+}
+/* Small Screens (Phones/Tablets) */
+@media screen and (max-width: 767px) {
+  /* Adjust the button group to show 2 buttons per row */
+  .work .button-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);  /* 2 buttons per row */
+      gap: 1rem;  /* Space between buttons */
+  }
+  /* Keep button size consistent */
+  .work .button-group .btn {
+      min-width: unset;  /* Remove any fixed width */
+      width: 100%;  /* Buttons take up full width of each grid cell */
+  }
+}
