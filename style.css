@@ -236,66 +236,12 @@ header a.conbtn:hover {
   align-items: center;
   flex-wrap: wrap;
 }
-.project .box-container .box {
-  border: 0.1rem solid rgba(0, 0, 0, 0.2);
-  margin: 2rem;
-  width: 33rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  height: 45rem;
-  background: #fff;
-}
-.project .box-container .box img {
-  height: 60%;
-  width: 100%;
-  object-fit: cover;
-  position: relative;
-}
-.project .box-container .box .content {
-  position: relative;
-  padding: 1rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-.project .box-container .box .content h3 {
-  font-size: 2.5rem;
-  color: #012970;
-  padding: 0.2rem 0;
-  font-weight: 600;
-}
-.project .box-container .box .content p {
-  font-size: 1.4rem;
-  color: rgb(53, 53, 53);
-  text-align: left;
-  margin-left: 1.5rem;
-}
-.project .box-container .box:hover {
-  transform: translateY(-1rem);
-  box-shadow: 0 0.8rem 1.1rem rgba(0, 0, 0, 0.4);
-}
-.project .btns {
-  display: flex;
-  padding: 1rem;
-  justify-content: space-between;
-  align-items: center;
-}
-.project .btns .btn {
-  font-family: "Nunito", sans-serif;
-  line-height: 0;
-  display: inline;
-  padding: 1.2rem 2rem;
-  border-radius: 0.5rem;
-  font-size: 1.6rem;
-  color: #fff;
-  background: #4225c7f5;
-}
-.project .btn:hover {
-  background: #6547e9f5;
-}
+
+
+
+
+
+
 /* project section ends */
 
 /* Footer  */
